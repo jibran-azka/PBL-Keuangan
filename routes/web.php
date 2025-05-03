@@ -12,8 +12,8 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return redirect()->route('login');
+})->name('home');
 
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
