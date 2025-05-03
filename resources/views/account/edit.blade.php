@@ -1,6 +1,6 @@
 <h2>Edit Akun</h2>
 
-<form action="{{ route('account.update', $account->id) }}" method="POST">
+<form action="{{ route('akun.update', $account->id) }}" method="POST">
     @csrf
     @method('PUT')
     <label>Nama Akun</label>

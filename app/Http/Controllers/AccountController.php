@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class AccountController extends Controller
 {
+
+    
     public function index()
     {
         $accounts = Account::where('user_id', auth()->id())->with('transactions')->get();
