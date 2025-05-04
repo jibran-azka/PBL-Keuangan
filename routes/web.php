@@ -20,12 +20,14 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('/akun', AccountController::class)->names('akun')->parameters([
         'akun' => 'account',
-    ]);    
+    ]);
     Route::resource('/transaksi', TransactionController::class)->names('transaksi');
     Route::resource('/topup', TopupController::class)->names('topup');
     Route::resource('/tagihan', TagihanController::class)->names('tagihan');
 
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+    Route::get('/laporan/pdf', [LaporanController::class, 'exportPdf'])->name('laporan.pdf');
+    Route::get('/laporan/excel', [LaporanController::class, 'exportExcel'])->name('laporan.excel');
     Route::get('/admin/user', [UserController::class, 'index'])->middleware('admin')->name('admin.user');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 });
