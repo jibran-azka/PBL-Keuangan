@@ -18,7 +18,9 @@ Route::get('/', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::resource('/akun', AccountController::class)->names('akun');
+    Route::resource('/akun', AccountController::class)->names('akun')->parameters([
+        'akun' => 'account',
+    ]);    
     Route::resource('/transaksi', TransactionController::class)->names('transaksi');
     Route::resource('/topup', TopupController::class)->names('topup');
     Route::resource('/tagihan', TagihanController::class)->names('tagihan');

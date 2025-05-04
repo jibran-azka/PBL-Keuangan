@@ -17,11 +17,11 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('transaksi.create')" :active="request()->routeIs('transaksi.create')">
-                        {{ __('Transaksi') }}
+                        {{ __('Noted Transaksi') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('akun.index')" :active="request()->routeIs('akun.index')">
-                        {{ __('Akun') }}
+                        {{ __('Account') }}
                     </x-nav-link>
 
                     <x-nav-link :href="route('laporan.index')" :active="request()->routeIs('laporan.index')">
@@ -82,7 +82,7 @@
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('transaksi.create')" :active="request()->routeIs('transaksi.create')">
-                {{ __('Transaksi') }}
+                {{ __('Noted Transaksi') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('akun.index')" :active="request()->routeIs('akun.index')">
                 {{ __('Akun') }}
