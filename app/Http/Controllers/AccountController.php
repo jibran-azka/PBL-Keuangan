@@ -64,4 +64,14 @@ class AccountController extends Controller
 
         return redirect()->route('akun.index')->with('success', 'Akun berhasil diperbarui.');
     }
+
+    public function destroy(Account $account)
+    {
+        $this->authorize('delete', $account);
+
+        $account->delete();
+
+        return redirect()->route('akun.index')->with('success', 'Akun berhasil dihapus.');
+    }
+
 }

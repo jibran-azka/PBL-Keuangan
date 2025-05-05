@@ -28,4 +28,9 @@ class AccountPolicy
     }
 
     // Jika ingin menambahkan policy lain (misal: delete), bisa ditambahkan disini
+    public function delete(User $user, Account $account)
+    {
+        return $user->id === $account->user_id;
+    }
+
 }
