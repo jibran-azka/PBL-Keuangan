@@ -29,7 +29,7 @@ class TransactionController extends Controller
             'jenis'       => $request->jenis,
             'jumlah'      => $request->jumlah,
             'keterangan'  => $request->keterangan,
-            'tanggal'     => now(), // ⬅️ otomatis isi tanggal sekarang
+            'tanggal'     => $request->tanggal ?? now(), // ⬅️ memungkinkan pengguna memilih tanggal
         ]);
 
         return redirect()->route('dashboard')->with('success', 'Transaksi berhasil ditambahkan!');
