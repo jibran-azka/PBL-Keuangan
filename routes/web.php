@@ -23,6 +23,9 @@ Route::middleware(['auth'])->group(function () {
     ]);
     Route::resource('/transaksi', TransactionController::class)->names('transaksi');
     Route::resource('/topup', TopupController::class)->names('topup');
+    Route::get('/topup/simulate', [TopupController::class, 'simulate'])->name('topup.simulate');
+
+
     Route::resource('/tagihan', TagihanController::class)->names('tagihan');
 
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
