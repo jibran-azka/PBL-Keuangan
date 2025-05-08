@@ -23,7 +23,8 @@ Route::middleware(['auth'])->group(function () {
     ]);
     Route::resource('/transaksi', TransactionController::class)->names('transaksi');
     Route::resource('/topup', TopupController::class)->names('topup');
-    Route::get('/topup/simulate', [TopupController::class, 'simulate'])->name('topup.simulate');
+    Route::post('/midtrans/callback', [TopUpController::class, 'midtransCallback']);
+
 
 
     Route::resource('/tagihan', TagihanController::class)->names('tagihan');

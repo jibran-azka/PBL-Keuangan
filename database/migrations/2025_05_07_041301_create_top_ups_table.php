@@ -12,12 +12,13 @@ class CreateTopUpsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('account_id')->constrained('accounts')->onDelete('cascade');
-            $table->bigInteger('amount');
-            $table->string('status')->default('pending');
-            $table->string('snap_token')->nullable();
+            $table->integer('amount');
+            $table->string('transaction_id')->nullable(); // dari Midtrans
+            $table->string('status')->default('pending'); // pending, success, failed
             $table->timestamps();
         });
     }
+
 
 
     public function down()

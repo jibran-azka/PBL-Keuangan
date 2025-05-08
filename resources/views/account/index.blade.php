@@ -19,6 +19,12 @@
            class="inline-block px-4 py-2 text-sm text-white bg-green-500 rounded hover:bg-green-600">
             Top Up
         </a>
+
+        <!-- Tombol Riwayat Top Up -->
+        <a href="{{ route('topup.index') }}"
+        class="inline-block px-4 py-2 text-sm text-white bg-yellow-500 rounded hover:bg-yellow-600">
+        Riwayat Top Up
+        </a>
     </div>
 
     <!-- Tabel Daftar Akun Keuangan -->
