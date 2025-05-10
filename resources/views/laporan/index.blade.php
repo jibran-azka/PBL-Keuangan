@@ -34,7 +34,7 @@
                             <td class="px-4 py-2 capitalize">{{ $t->jenis }}</td>
                             <td class="px-4 py-2">Rp{{ number_format($t->jumlah, 0, ',', '.') }}</td>
                             <td class="px-4 py-2">{{ $t->keterangan }}</td>
-                            <td class="px-4 py-2">{{ $t->account->name }}</td>
+                            <td class="px-4 py-2">{{ $t->account->nama_akun }}</td>
                         </tr>
                     @endforeach
                 </tbody>

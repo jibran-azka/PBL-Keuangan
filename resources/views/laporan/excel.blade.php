@@ -15,7 +15,7 @@
                 <td>{{ ucfirst($t->jenis) }}</td>
                 <td>{{ $t->jumlah }}</td>
                 <td>{{ $t->keterangan }}</td>
-                <td>{{ $t->account->name }}</td>
+                <td>{{ $t->account->nama_akun}}</td>
             </tr>
         @endforeach
     </tbody>

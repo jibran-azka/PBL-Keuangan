@@ -30,7 +30,7 @@
                     <td>{{ ucfirst($t->jenis) }}</td>
                     <td>Rp{{ number_format($t->jumlah, 0, ',', '.') }}</td>
                     <td>{{ $t->keterangan }}</td>
-                    <td>{{ $t->account->name }}</td>
+                    <td>{{ $t->account->nama_akun }}</td>
                 </tr>
             @endforeach
         </tbody>
